@@ -1,5 +1,11 @@
 from datetime import datetime
+
+
 def get_days_from_today(date):
+    """
+    Повертає кількість днів від заданої дати до сьогодні.
+    Формат дати: YYYY-MM-DD
+    """
     try:
         # перетворюємо рядок у дату
         given_date = datetime.strptime(date, "%Y-%m-%d").date()
@@ -16,5 +22,7 @@ def get_days_from_today(date):
         print("Неправильний формат дати. Використовуйте YYYY-MM-DD")
         return None
 
-# приклад перевірки
-print(get_days_from_today("2020-10-09"))
+
+if __name__ == "__main__":
+    # приклад перевірки
+    print(get_days_from_today("2020-10-09"))
